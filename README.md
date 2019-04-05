@@ -1,5 +1,5 @@
 # Watch-Folder
-This program for MacOS (if you want to compile programs for other OS, you should change the directory path to Trash folder) will move files and folders to trash by schedule. Files and folders will move to Trash folder, files and folder in Trash will be deleted.
+This program for **MacOS** (if you want to compile programs for other OS, you should change the directory path to Trash folder) will move files and folders to trash by schedule. Files and folders will move to Trash folder, files and folder in Trash will be deleted.
 
 ## 1. Edit crontab
 Paste in terminal *crontab -e* and edit by following
