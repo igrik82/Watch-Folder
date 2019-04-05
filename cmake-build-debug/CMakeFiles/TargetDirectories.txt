@@ -1,0 +1,3 @@
+/Users/igrik/Documents/C_Programm_sourse_code/delete_files_in_DIR/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/igrik/Documents/C_Programm_sourse_code/delete_files_in_DIR/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/igrik/Documents/C_Programm_sourse_code/delete_files_in_DIR/cmake-build-debug/CMakeFiles/delete_files_in_DIR.dir
