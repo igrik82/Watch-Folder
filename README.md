@@ -6,7 +6,7 @@ Paste in terminal *crontab -e* and edit by following
 
 #### Launch program every minute
 \* * * * * /usr/bin/watchFolder
-#### Launch program every 10 minutes
+#### Launch program every 10 minutes 
 \*/10 * * * * /usr/bin/watchFolder
 
 ## 2. Edit watchFolder.conf (put it to /etc/watchFolder.conf)
