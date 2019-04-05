@@ -5,9 +5,9 @@ Files and folder move to Trash folder, files and folder in Trash will be deleted
 ## Edit crontab
 Paste in terminal *crontab -e* and edit by following
 
-### Launch program every minute
+#### Launch program every minute
 \* * * * * /usr/bin/watchFolder
-### Launch program every 10 minutes
+#### Launch program every 10 minutes
 \*/10 * * * * /usr/bin/watchFolder
 
 ## Edit watcFolder.conf (put it to /etc/watcFolder.conf)
