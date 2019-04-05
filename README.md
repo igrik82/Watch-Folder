@@ -15,7 +15,7 @@ Paste in terminal *crontab -e* and edit by following
 * 1 m - minut(s) old
 * 1 h - hour(s) old
 * 1 d - day(s) old
-The period may be from 1 up to 1000000000 (in seconds this is about 31,7 years :)
+The period may be from 1 up to 1000000000 (in seconds this is about 31,7 years)
 
 /Users/igrik/dir may be with spaces 6 h - (files in folder "/Users/igrik/dir may be with spaces" older than 6 hours will be moved to Trash folder)
 
