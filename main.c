@@ -171,6 +171,7 @@ int toDelete(char *directory, unsigned amountTime, char unitOfTime){
 
     long timeDifference = 1;
 
+    //Если что-то не так, то не помечаем для удаления
     if(amountTime > 1000000000 || amountTime < 0){
         return 0;
     }
@@ -192,6 +193,8 @@ int toDelete(char *directory, unsigned amountTime, char unitOfTime){
     }
 
     free(timeHandler);
+    timeHandler = NULL;
+
     if(timeDifference < 0){
         return 1;
     } else {
