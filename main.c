@@ -25,7 +25,7 @@ struct stack{
 struct stack *listDirRecursively(char *basePath, struct stack *stackHolder);
 FILE *readSettings(char *settingPath);
 struct settings *parseStringSetting(char *strSetting);
-int toDelete(char *directory, unsigned amountTime, char unitOfTime);
+int toDelete(char *directory, float amountTime, char unitOfTime);
 struct stack *pushToStack(char *directory, struct stack *stackHolder);
 char *popFromStack(struct stack **stackHolder);
 char *getPathToTrash(char *path);
@@ -160,7 +160,7 @@ struct stack *pushToStack(char *directory, struct stack *stackHolder){
 
 }
 
-int toDelete(char *directory, unsigned amountTime, char unitOfTime){
+int toDelete(char *directory, float amountTime, char unitOfTime){
     //Узнаем текущее время
     time_t seconds;
     seconds = time(NULL);
@@ -169,7 +169,7 @@ int toDelete(char *directory, unsigned amountTime, char unitOfTime){
     struct stat *timeHandler = (struct stat*)malloc(sizeof(struct stat));
     stat(directory, timeHandler);
 
-    long timeDifference = 1;
+    double timeDifference = 1;
 
     //Если что-то не так, то не помечаем для удаления
     if(amountTime > 1000000000 || amountTime < 0){
@@ -258,7 +258,7 @@ char *getCleanDirPath(char *givenString){
 /* Функция парсинга строки из файла настроек. Возвращает структуру настроек */
 struct settings *parseStringSetting(char *strSetting){
     char unitOfTime;
-    unsigned amountTime, counter, spaceCounter = 0;
+    float amountTime, counter, spaceCounter = 0;
     char *str_ptr = strSetting;
 
     // Идем до конца строки.
@@ -284,7 +284,8 @@ struct settings *parseStringSetting(char *strSetting){
     }
     *str_ptr++ = '\0';
     char *end;
-    amountTime = strtol(str_ptr, &end, 10);
+    //amountTime = strtol(str_ptr, &end, 10);
+    amountTime = strtod(str_ptr, &end);
 
     //Получаем читый путь с экранированием пробелов и проверкой на лишние пробелы в начале и конце, а также слеш символ
     char *directory = getCleanDirPath(strSetting);
